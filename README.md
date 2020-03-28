@@ -11,11 +11,22 @@ open julia.dmg
 ln -s /Applications/Julia-1.4.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
 ```
 
+To install Jupyter Notebook with IJulia kernel:
+
+```
+brew install jupyter
+julia -e 'using Pkg; Pkg.add("IJulia")'
+```
+
 ## Commands
 
 Run program
 
     julia hello.jl
+
+Open a notebook
+
+    jupyter notebook hello.ipynb
 
 ## Links
 
