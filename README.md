@@ -11,18 +11,26 @@ open julia.dmg
 ln -s /Applications/Julia-1.4.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
 ```
 
-To install Jupyter Notebook with IJulia kernel:
+To install Jupyter Notebook and IJulia (Julia kernel for Jupyter Notebook):
 
 ```
 brew install jupyter
 julia -e 'using Pkg; Pkg.add("IJulia")'
 ```
 
+## Create project in current directory
+
+```
+julia
+]
+activate .
+```
+
 ## Commands
 
 Run program
 
-    julia hello.jl
+    julia src/hello.jl
 
 Open a notebook
 
@@ -31,3 +39,4 @@ Open a notebook
 ## Links
 
 - [MacOS install instructions](https://julialang.org/downloads/platform/#macos)
+- [Working with environments](https://julialang.github.io/Pkg.jl/v1/environments/)
