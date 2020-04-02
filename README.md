@@ -32,6 +32,10 @@ Run program
 
     julia src/hello.jl
 
+Run program in local environment
+
+    julia --project src/hello.jl
+
 Open a notebook
 
     jupyter notebook hello.ipynb

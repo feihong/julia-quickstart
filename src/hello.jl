@@ -1,3 +1,5 @@
+import Pkg
+
 function randomHanzi()
     n = rand(0x4e00:0x9fff)
     String([Char(n)])
@@ -8,3 +10,4 @@ for _ in 1:8
 end
 
 println()
+Pkg.status()
