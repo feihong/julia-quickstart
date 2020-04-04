@@ -38,7 +38,7 @@ Run program in local environment
 
 Open a notebook
 
-    jupyter notebook hello.ipynb
+    jupyter notebook notebooks/markdown.ipynb
 
 ## Links
 
