@@ -40,6 +40,17 @@ Open a notebook
 
     jupyter notebook notebooks/markdown.ipynb
 
+## Uninstall Julia
+
+- Delete Julia.app from `Applications`
+- Remove Julia directories:
+
+  ```
+  rm -rf ~/.julia
+  rm ~/.juliarc.jl
+  rm ~/.julia_history
+  ```
+
 ## Links
 
 - [MacOS install instructions](https://julialang.org/downloads/platform/#macos)
