@@ -34,6 +34,12 @@ md"""
 Total expenses: \$$(sum(df.price))
 """
 
+# ╔═╡ 0c96b8ce-7fa0-11eb-31c3-e95b51501ee2
+gdf = groupby(df, [:category])
+
+# ╔═╡ 8ca9238a-7fa0-11eb-2c33-7f9f31d4492a
+combine(gdf, :price => sum)
+
 # ╔═╡ Cell order:
 # ╠═e0a0c800-7f94-11eb-3647-3521b398d6eb
 # ╠═72df0c2c-7f95-11eb-02c9-91a1b69d1cc2
@@ -42,3 +48,5 @@ Total expenses: \$$(sum(df.price))
 # ╟─8ab5af90-7f98-11eb-087b-6b2cdbd4e368
 # ╠═2e878000-7f99-11eb-3310-379db76d7772
 # ╠═3b834b6e-7f9d-11eb-155b-87a40a290c9e
+# ╠═0c96b8ce-7fa0-11eb-31c3-e95b51501ee2
+# ╠═8ca9238a-7fa0-11eb-2c33-7f9f31d4492a
