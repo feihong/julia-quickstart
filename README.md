@@ -2,21 +2,17 @@
 
 ## Installation
 
-The Homebrew cask for Julia is not always up-to-date, so it's best to install Julia by downloading and running the installer:
+The Homebrew cask for Julia is not always up-to-date, so it's best to install Julia by downloading and running the latest DMG file from https://julialang.org/downloads/
 
-```
-curl https://julialang-s3.julialang.org/bin/mac/x64/1.4/julia-1.4.0-mac64.dmg -o julia.dmg
-open julia.dmg
-# Drag Julia icon into Applications folder
-ln -s /Applications/Julia-1.4.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
-```
+Create symbolic link for Julia binary:
 
-To install Jupyter Notebook and IJulia (Julia kernel for Jupyter Notebook):
+    rm -f /usr/local/bin/julia
+    ln -s /Applications/Julia-1.5.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
 
-```
-brew install jupyter
-julia -e 'using Pkg; Pkg.add("IJulia")'
-```
+Install Pluto (can take a while)
+
+    julia> ]
+    (v1.5) pkg> add Pluto
 
 ## Create project in current directory
 
@@ -36,9 +32,9 @@ Run program in local environment
 
     julia --project src/hello.jl
 
-Open a notebook
+Start Pluto
 
-    jupyter notebook notebooks/markdown.ipynb
+    julia notebook.jl
 
 ## Uninstall Julia
 
@@ -54,4 +50,5 @@ Open a notebook
 ## Links
 
 - [MacOS install instructions](https://julialang.org/downloads/platform/#macos)
+- [Install Pluto](https://github.com/fonsp/Pluto.jl#installation)
 - [Working with environments](https://julialang.github.io/Pkg.jl/v1/environments/)
