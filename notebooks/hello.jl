@@ -27,7 +27,7 @@ html"""
 """
 
 # ╔═╡ 2e878000-7f99-11eb-3310-379db76d7772
-df = CSV.File("wangman.csv") |> DataFrame
+df = CSV.File("expenses.csv") |> DataFrame
 
 # ╔═╡ Cell order:
 # ╠═e0a0c800-7f94-11eb-3647-3521b398d6eb
