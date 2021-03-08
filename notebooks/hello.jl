@@ -51,10 +51,14 @@ Total expenses: \$$(sum(df.price))
 gdf = groupby(df, [:category])
 
 # ╔═╡ 8ca9238a-7fa0-11eb-2c33-7f9f31d4492a
-begin
-	sumdf = combine(gdf, :price => sum)
-	sort!(sumdf, [order(:price_sum, rev=true)])
+sumdf = begin
+	temp = combine(gdf, :price => sum)
+	sort!(temp, [order(:price_sum, rev=true)])
+	temp
 end
+
+# ╔═╡ 02a4f83e-7fb5-11eb-08b6-af37033b1549
+@df sumdf pie(:category, :price_sum)
 
 # ╔═╡ Cell order:
 # ╠═e0a0c800-7f94-11eb-3647-3521b398d6eb
@@ -70,3 +74,4 @@ end
 # ╠═3b834b6e-7f9d-11eb-155b-87a40a290c9e
 # ╠═0c96b8ce-7fa0-11eb-31c3-e95b51501ee2
 # ╠═8ca9238a-7fa0-11eb-2c33-7f9f31d4492a
+# ╠═02a4f83e-7fb5-11eb-08b6-af37033b1549
