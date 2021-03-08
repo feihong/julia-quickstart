@@ -51,7 +51,10 @@ Total expenses: \$$(sum(df.price))
 gdf = groupby(df, [:category])
 
 # ╔═╡ 8ca9238a-7fa0-11eb-2c33-7f9f31d4492a
-sumdf = combine(gdf, :price => sum)
+begin
+	sumdf = combine(gdf, :price => sum)
+	sort!(sumdf, [order(:price_sum, rev=true)])
+end
 
 # ╔═╡ Cell order:
 # ╠═e0a0c800-7f94-11eb-3647-3521b398d6eb
