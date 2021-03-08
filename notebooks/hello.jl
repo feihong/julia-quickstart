@@ -60,6 +60,9 @@ end
 # ╔═╡ 02a4f83e-7fb5-11eb-08b6-af37033b1549
 @df sumdf pie(:category, :price_sum)
 
+# ╔═╡ 917346ec-7fb5-11eb-1dd3-577ad7e6274f
+@df sumdf bar(:category, :price_sum, label="All expenses")
+
 # ╔═╡ Cell order:
 # ╠═e0a0c800-7f94-11eb-3647-3521b398d6eb
 # ╠═72df0c2c-7f95-11eb-02c9-91a1b69d1cc2
@@ -75,3 +78,4 @@ end
 # ╠═0c96b8ce-7fa0-11eb-31c3-e95b51501ee2
 # ╠═8ca9238a-7fa0-11eb-2c33-7f9f31d4492a
 # ╠═02a4f83e-7fb5-11eb-08b6-af37033b1549
+# ╠═917346ec-7fb5-11eb-1dd3-577ad7e6274f
