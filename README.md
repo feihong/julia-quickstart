@@ -28,6 +28,18 @@ Run program
 
     julia src/hello.jl
 
+Add package in local environment
+
+    julia --project
+    ]
+    add Pipe
+
+Remove package in local environment
+
+    julia --project
+    ]
+    remove Pipe
+
 Run program in local environment
 
     julia --project src/hello.jl
@@ -52,3 +64,5 @@ Start Pluto
 - [MacOS install instructions](https://julialang.org/downloads/platform/#macos)
 - [Install Pluto](https://github.com/fonsp/Pluto.jl#installation)
 - [Working with environments](https://julialang.github.io/Pkg.jl/v1/environments/)
+- [DataFrames.jl Functions](https://dataframes.juliadata.org/stable/lib/functions/)
+- [Chain.jl for chaining computations](https://github.com/jkrumbiegel/Chain.jl)
