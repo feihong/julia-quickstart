@@ -10,20 +10,22 @@ Create symbolic link for Julia binary:
 
     rm -f /usr/local/bin/julia
     ln -s /Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
-    
-## Create project in current directory
-
-```
-julia
-]
-activate .
-```
-
+        
 ## Commands
+
+Install Pluto (might take a while)
+
+    julia -e 'using Pkg; Pkg.add("Pluto")'
 
 Run program
 
     julia src/hello.jl
+
+Create project in current directory
+
+    julia
+    ]
+    activate .
 
 Add package in local environment
 
