@@ -2,18 +2,15 @@
 
 ## Installation
 
+## Mac
+
 The Homebrew cask for Julia is not always up-to-date, so it's best to install Julia by downloading and running the latest DMG file from https://julialang.org/downloads/
 
 Create symbolic link for Julia binary:
 
     rm -f /usr/local/bin/julia
-    ln -s /Applications/Julia-1.5.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
-
-Install Pluto (can take a while)
-
-    julia> ]
-    (v1.5) pkg> add Pluto
-
+    ln -s /Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
+    
 ## Create project in current directory
 
 ```
